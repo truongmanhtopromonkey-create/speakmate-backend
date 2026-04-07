@@ -112,6 +112,6 @@ app.post("/speak/evaluate", async (req, res) => {
   }
 });
 
-app.listen(port, "0.0.0.0", () => {
-  console.log(`SpeakMate backend running at http://0.0.0.0:${port}`);
+app.listen(process.env.PORT || 3000, "0.0.0.0", () => {
+  console.log(`SpeakMate backend running on port ${process.env.PORT || 3000}`);
 });
