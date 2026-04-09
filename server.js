@@ -267,9 +267,24 @@ Rules:
 - praise should be 2 to 3 items.
 - pronunciationWords should be 0 to 3 items.
 - errors should align with the actual corrections.
+
+Very important anti-overcorrection rules:
+- If the transcript appears too short, unclear, off-topic, or likely misrecognized by speech-to-text, do NOT rewrite it into a completely different answer.
+- Do NOT invent detailed content the learner did not say.
+- If speech recognition may be wrong, say so gently in the summary or nextStep.
+- In unclear cases, keep improvements conservative.
+- Prefer suggestions like:
+  "Try saying one full sentence such as: My favorite food is pizza."
+  instead of pretending the learner already meant that.
+- If the topic and transcript do not match, explain that the answer may not have been captured clearly.
+- In unclear cases, pronunciationWords should focus on simple target words from the suggested model sentence.
+
+Output style:
+- encouraging
+- simple English
+- practical for speaking practice
 `;
 }
-
 const coachingJsonSchema = {
   type: "object",
   additionalProperties: false,
